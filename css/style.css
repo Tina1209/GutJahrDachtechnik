@@ -1,0 +1,698 @@
+/* ======================================
+
+Zentrales Stylesheet 
+Datei: style.css 
+
+======================================= */
+:root {
+  /* color */
+  --main-dark-trans: rgb(31 54 92/ 0.8);
+  --color-bg-trans: rgba(8, 8, 8, 0.7);
+  --button-color: #c7160d;
+  --yellow_color: #ffb536;
+  --hover-light-color: #ff3b31;
+  --main-fonts-color-dark: #1f1f1f;
+  --main-fonts-color-light: #f5f5f5;
+
+  /* font-size regular Text */
+  --font-size-mobil-text: 16px;
+  --font-size-tablet-text: 18px;
+  --font-size-desktop-text: 20px;
+
+  /* font-size h1 */
+  --font-size-mobil-title: 28px;
+  --font-size-tablet-title: 36px;
+  --font-size-desktop-title: 48px;
+
+  /* font-size h2 */
+  --font-size-mobil-h2: 26px;
+  --font-size-tablet-h2: 32px;
+  --font-size-desktop-h2: 46px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* button styling */
+
+.custom-btn {
+  background-color: var(--button-color);
+  color: var(--main-fonts-color-light);
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: var(--hover-light-color);
+  transform: scale(1.05);
+}
+.custom-btn:active {
+  color: var(--main-fonts-color-dark);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-btn.mt-auto {
+  margin-top: auto;
+  align-self: flex-end;
+}
+/* button nach oben stylling */
+
+.button_down {
+  position: fixed;
+  bottom: 25px;
+  right: 2px;
+  text-align: center;
+  background-color: var(--color-bg-trans);
+  border-radius: 16px;
+  border: 2px solid var(--main-fonts-color-light);
+  z-index: 75;
+  cursor: pointer;
+  margin: 0;
+}
+
+.link_button {
+  color: var(--main-fonts-color-light);
+  text-decoration: none;
+  font-size: 32px;
+  padding: 16px;
+}
+.botton_paragraf {
+  margin: 0;
+}
+.button_down:hover {
+  transform: scale(1.05);
+}
+
+/* botton styki styling */
+
+.button_styki {
+  position: fixed;
+  text-align: center;
+  background-color: var(--color-bg-trans);
+  border-radius: 16px;
+  border: 2px solid var(--main-fonts-color-light);
+  z-index: 75;
+  cursor: pointer;
+  margin: 0;
+  width: 54px;
+}
+.botton_first {
+  bottom: 50%;
+  right: 2px;
+}
+.botton_second {
+  bottom: calc(50% - 58px);
+  right: 2px;
+}
+.botton_third {
+  bottom: calc(50% - 118px);
+  right: 2px;
+}
+.link_button_styki {
+  text-decoration: none;
+}
+.botton_paragraf_styki {
+  margin: 0;
+  padding: 6px;
+}
+.botton_first:hover,
+.botton_second:hover,
+.botton_third:hover {
+  transform: scale(1.05);
+}
+
+/* navigation styling */
+
+.navbar-toggler {
+  color: var(--main-fonts-color-light);
+}
+nav {
+  background-color: var(--main-dark-trans);
+}
+.navbar-nav,
+.nav-link {
+  color: var(--main-fonts-color-light) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23f5f5f5' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.header_text {
+  font-size: 14px;
+  color: var(--main-fonts-color-dark);
+  margin-left: 10px;
+}
+
+/** HERO section styling **/
+
+.hero {
+  background: url(../bilder/bg_section1.jpg) no-repeat center center/cover fixed;
+  height: 100vh;
+  color: var(--main-fonts-color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title_hero {
+  background-color: var(--color-bg-trans);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title_hero p {
+  font-size: var(--font-size-mobil-text);
+  font-style: italic;
+  padding-top: 10px;
+  padding: 10px;
+}
+
+.title_hero_h1 {
+  font-family: "Merriweather", serif;
+  font-size: var(--font-size-mobil-title);
+  color: var(--yellow_color);
+  padding: 0 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/** Tittel für jeder Section **/
+.section-header {
+  font-family: "Merriweather", serif;
+  background-color: var(--main-dark-trans);
+  color: var(--main-fonts-color-light);
+  padding: 20px;
+  text-align: center;
+}
+
+/** Über uns Section styling **/
+/* hero-section styling */
+
+.ueber-uns-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: var(--main-fonts-color-dark);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.content .image-container {
+  animation: slide-in-left 1.2s ease-out both;
+}
+.content .text-container {
+  animation: slide-in-right 1.2s ease-out both;
+}
+.text-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  opacity: 0;
+  animation-delay: 0.1s;
+}
+.text-container h2 {
+  font-family: "Merriweather", serif;
+  padding-bottom: 16px;
+  font-size: var(--font-size-mobil-title);
+  font-weight: 900;
+}
+.text-container p {
+  font-size: var(--font-size-mobil-text);
+  text-align: justify;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation-delay: 0.1s;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/** Leistungen Section styling **/
+
+.leistungen_card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leistungen_card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+}
+.card-text {
+  text-align: justify;
+}
+.card-title {
+  font-weight: 600;
+  font-family: "Merriweather", serif;
+}
+.card-body {
+  flex-grow: 1;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
+
+/** Dacharbeiten aus Meisterhand Section styling **/
+.carousel-item img {
+  height: 80vh;
+  max-height: 700px;
+  object-fit: cover;
+  width: 100%;
+}
+.carousel-caption {
+  background-color: var(--color-bg-trans);
+  border-radius: 5px;
+}
+.carousel_h5 {
+  font-size: 20px;
+}
+.carousel_paragraf {
+  font-size: 14px;
+}
+/** Kundenstimmen Section styling **/
+
+.cart_kundenstimmen {
+  background-color: rgba(8, 8, 8, 0.411) !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cart_kundenstimmen:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  display: flex;
+  flex: 1 1 100%;
+}
+
+.card {
+  height: 100%;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 3em;
+  color: var(--yellow_color);
+}
+
+.quote-icon-unter {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  font-size: 3em;
+  color: var(--yellow_color);
+}
+
+.card-title {
+  margin-bottom: 1rem;
+}
+
+.card-author {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+/** PARTNER section styling **/
+
+.partner {
+  background: url(../bilder/bg_sektion_partner.png) no-repeat center
+    center/cover fixed;
+  height: 100vh;
+  color: var(--main-fonts-color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper_partner {
+  background-color: var(--color-bg-trans);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper_partner_h2 {
+  font-size: var(--font-size-mobil-h2);
+  color: var(--main-fonts-color-light);
+  padding: 0 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.img-partner {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  object-fit: cover;
+}
+.img_container_wrapper {
+  padding: 0 !important;
+}
+
+/** FOOTER section styling **/
+
+footer {
+  background-color: var(--main-dark-trans);
+  color: var(--main-fonts-color-light);
+  padding: 20px 0;
+}
+.footer_hr {
+  border: none;
+  border-top: 2px solid var(--main-fonts-color-light);
+  width: 90%;
+  margin: 20px auto;
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.footer-logo img {
+  max-height: 60px;
+}
+
+.footer-logo p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.link_footer {
+  text-decoration: none;
+  color: var(--main-fonts-color-light);
+}
+
+.span_light {
+  font-weight: 200;
+}
+
+.footer_link_leistungen {
+  text-decoration: none;
+  color: var(--main-fonts-color-light);
+}
+
+.li_footer_leistungen li {
+  margin: 10px 0;
+}
+
+/** KONTAKT PAGE STYLING */
+.kontakt_hero {
+  background: url(../bilder/bg_hero_kontakt.jpg) no-repeat center center/cover
+    fixed;
+}
+
+.kontakt_text h3 {
+  font-size: 24px;
+  font-family: "Merriweather", serif;
+  font-weight: 800;
+}
+
+.kontakt_text p {
+  font-size: var(--font-size-mobil-text);
+  text-align: justify;
+}
+
+/* kontakt formular styling */
+
+input:focus, 
+textarea:focus, 
+select:focus {
+  border-color: rgb(85, 85, 85) !important; 
+  outline: none; 
+  box-shadow: 0 0 5px rgba(85, 85, 85, 0.75) !important;
+}
+
+input:hover, 
+textarea:hover, 
+select:hover {
+  border-color: rgb(85, 85, 85);
+}
+
+
+
+/* karte sektion styling */
+#karte_sektion {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.wrapper_contact_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.contact-info,
+.opening-hours {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.contact-info h5,
+.opening-hours h5 {
+  font-size: var(--font-size-mobil-text);
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info p,
+.opening-hours p {
+  color: #555;
+  margin: 6px 0;
+}
+.container_karte{
+  overflow-x: hidden;
+}
+
+/** KONTAKT PAGE STYLING */
+
+/*! media Tablet styling */
+
+@media (min-width: 767px) and (max-width: 991px) {
+  /* section hero styling */
+  .title_hero p {
+    font-size: var(--font-size-tablet-text);
+  }
+  .title_hero_h1 {
+    font-size: var(--font-size-tablet-title);
+  }
+
+  /* section partner styling */
+  .wrapper_partner_h2 {
+    font-size: var(--font-size-tablet-h2);
+  }
+  .text-container h1 {
+    padding-bottom: 16px;
+    font-size: var(--font-size-tablet-title);
+  }
+  .text-container p {
+    font-size: var(--font-size-tablet-text);
+  }
+
+  /* leistungen sektion styling */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col-lg-4 {
+    display: flex;
+  }
+
+  /* Meisterhand sektion styling */
+  .carousel_h5 {
+    font-size: 24px;
+  }
+  .carousel_paragraf {
+    font-size: 18px;
+  }
+
+  /** KONTAKT PAGE STYLING */
+
+  /* kontaktformular styling */
+  .kontakt_text h3 {
+    font-size: 24px;
+  }
+  .kontakt_text p {
+    font-size: var(--font-size-tablet-text);
+  }
+}
+
+/*! media Desktop styling */
+
+@media (min-width: 991px) {
+  /* section hero styling */
+  .title_hero p {
+    font-size: var(--font-size-desktop-text);
+  }
+  .title_hero_h1 {
+    font-size: var(--font-size-desktop-title);
+  }
+
+  /* section partner styling */
+  .wrapper_partner_h2 {
+    font-size: var(--font-size-desktop-h2);
+  }
+
+  /* hero-section styling */
+  .ueber-uns-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  /* ueber uns sektion styling */
+  .content {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .text-container {
+    flex: 1;
+    justify-content: center;
+    order: 1;
+  }
+  .text-container h2 {
+    font-size: var(--font-size-desktop-h2);
+  }
+  .text-container p {
+    font-size: var(--font-size-desktop-text);
+  }
+  .image-container {
+    flex: 1;
+    order: 0;
+  }
+  .image-container img {
+    height: 100%;
+  }
+
+  /* leistungen sektion styling */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col-lg-4 {
+    display: flex;
+  }
+  /* Meisterhand sektion styling */
+  .carousel_h5 {
+    font-size: 28px;
+  }
+  .carousel_paragraf {
+    font-size: 22px;
+  }
+
+  /** KONTAKT PAGE STYLING */
+
+  /* kontaktformular styling */
+  .kontakt_text h3 {
+    font-size: 28px;
+  }
+  .kontakt_text p {
+    font-size: var(--font-size-desktop-text);
+  }
+
+  #karte_sektion .row {
+    display: flex;
+    align-items: flex-start;
+  }
+  .map-container,
+  .wrapper_contact_info {
+    flex: 1;
+    max-width: 50%;
+  }
+}
